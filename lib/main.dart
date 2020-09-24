@@ -57,7 +57,6 @@ class MyApp extends StatelessWidget {
                 Expanded(
                     flex: 5,
                     child: Container(
-                      
                       margin: new EdgeInsets.all(10.0),
                       constraints: BoxConstraints.tightForFinite(width: 100),
                       decoration: BoxDecoration(
@@ -91,46 +90,36 @@ class MyApp extends StatelessWidget {
             ),
             Column(
               children: [
-                Container(
-                  height: 100.0,
-                  width: 100.0,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.rectangle,
-                    color: Colors.yellow,
-                    border: Border.all(color: Colors.black, width: 3),
-                  ),
-                  child: Center(
-                    child: Text(
-                      'Container 1',
-                    ),
-                  ),
-                ),
-                Transform.rotate(
-                    angle: pi / 4,
+                Expanded(
+                    flex: 4,
+                    child: Container(
+                      height: 100.0,
+                      width: 100.0,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.black,
+                        border: Border.all(color: Colors.white, width: 3),
+                      ),
+                      child: Center(
+                        child: Text('Container 5',
+                            style: TextStyle(color: Colors.white)),
+                      ),
+                    )),
+                Expanded(
+                    flex: 2,
                     child: Container(
                       height: 100.0,
                       width: 100.0,
                       decoration: BoxDecoration(
                         shape: BoxShape.rectangle,
-                        color: Colors.white,
-                        border: Border.all(color: Colors.black, width: 3),
+                        color: Colors.red,
                       ),
-                      child: Center(
-                        child: Text(
-                          'Container 1',
-                        ),
+                      child: Align(
+                        alignment: Alignment.topLeft,
+                        child: Text('Container 5',
+                            style: TextStyle(color: Colors.black)),
                       ),
                     )),
-                Container(
-                  height: 50.0,
-                  //height: double.infinity,
-                  width: 50,
-                  //width: double.infinity,
-                  color: Colors.red,
-                  child: Text(
-                    'Container 3',
-                  ),
-                )
               ],
             ),
           ],
