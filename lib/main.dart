@@ -117,7 +117,9 @@ class MyApp extends StatelessWidget {
                       child: Align(
                         alignment: Alignment.topLeft,
                         child: Text('Con 6',
-                            style: TextStyle(color: Colors.black)),
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 30)),
                       ),
                     )),
               ],
